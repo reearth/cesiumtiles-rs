@@ -24,6 +24,10 @@ pub struct Asset {
     /// Application-specific data.
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub extra: Option<Value>,
+
+    /// Application-specific data.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub extras: Option<Value>,
 }
 
 impl Default for Asset {
@@ -33,6 +37,7 @@ impl Default for Asset {
             tileset_version: None,
             extensions: None,
             extra: None,
+            extras: None,
         }
     }
 }
