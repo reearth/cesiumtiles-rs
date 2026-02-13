@@ -3,6 +3,7 @@
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 
+use indexmap::IndexMap;
 use serde_json::Value;
 
 /// Metadata about the entire tileset.
@@ -316,7 +317,7 @@ pub struct Tileset {
 
     /// (deprecated) A dictionary object of metadata about per-feature properties.
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub properties: Option<HashMap<String, Value>>,
+    pub properties: Option<IndexMap<String, Value>>,
 
     /// An object defining the structure of metadata classes and enums. When this is defined, then `schemaUri` shall be undefined.
     #[serde(skip_serializing_if = "Option::is_none")]
