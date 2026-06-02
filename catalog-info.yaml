@@ -1,0 +1,18 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: cesiumtiles-rs
+  namespace: reearth
+  description: '[WIP] 3D Tiles (JSON models) for Rust'
+  annotations:
+    github.com/project-slug: reearth/cesiumtiles-rs
+  links:
+  - url: https://github.com/reearth/cesiumtiles-rs
+    title: GitHub
+    icon: github
+  tags:
+  - rust
+spec:
+  type: service
+  lifecycle: experimental
+  owner: reearth/flow
